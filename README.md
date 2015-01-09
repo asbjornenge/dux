@@ -33,7 +33,7 @@ The [Dispatcher](/) is responsible for distributing messages from publishers to 
 
 ### Scheduler
 
-The [Scheduler](/) is responsible for managing components. It get a list of *components* and *hosts* from the StateStore and makes decisions about where to run those components. It can both add and remove components.
+The [Scheduler](/) is responsible for managing components. It gets a list of *components* and *hosts* from the StateStore and makes decisions about where to run those components. It can both add and remove components.
 
 ### Discovery
 
