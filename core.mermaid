@@ -1,0 +1,12 @@
+graph LR;
+
+	StateStore;
+	Dispatcher;
+	Scheduler;
+	ServiceDiscovery;
+	Applications((Application Components));
+
+	StateStore --> Dispatcher
+	Dispatcher --> Scheduler
+	Scheduler --> Applications
+	Applications --> ServiceDiscovery
