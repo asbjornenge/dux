@@ -33,4 +33,8 @@ The [Dispatcher](/) is responsible for distributing messages from publishers to 
 
 ### Scheduler
 
-The [Scheduler](/)  
+The [Scheduler](/) is responsible for managing components. It get a list of *components* and *hosts* from the StateStore and makes decisions about where to run those components. It can both add and remove components.
+
+### Discovery
+
+The [Discovery]() service is there to facilitate components discovering each other. There is a multitude of ways to implement service discovery. The reference implementation of Dux uses a [DNS](http://en.wikipedia.org/wiki/Domain_Name_System) based service discovery solution. This has the benefit that most current software (and us humans) are accustomed to using DNS for service discovery.
