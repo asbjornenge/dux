@@ -29,7 +29,7 @@ Examples of state:
 
 ### Dispatcher
 
-The [Dispatcher](/) is responsible for distributing messages from publishers to subscribers. Any component can act as publisher or subscriber to any message channel. This flexibility allows the design to grow dynamically.
+The [Dispatcher](/) is responsible for distributing messages from publishers to subscribers. Any component can act as publisher or subscriber to any message channel. Messages will be broadcast to all subscribes of that channel. This flexibility allows the system to grow dynamically.
 
 ### Scheduler
 
