@@ -3,10 +3,10 @@ graph LR;
 	StateStore;
 	Dispatcher;
 	Scheduler;
-	ServiceDiscovery;
+	Discovery;
 	Applications((Application Components));
 
 	StateStore --> Dispatcher
 	Dispatcher --> Scheduler
 	Scheduler --> Applications
-	Applications --> ServiceDiscovery
+	Applications --> Discovery
