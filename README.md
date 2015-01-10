@@ -4,7 +4,7 @@
 
 Dux is an architecture for distributed systems inspired by [Flux](https://facebook.github.io/flux/). Dux is both a design and a reference implementation. The reference implementation uses [Docker](https://www.docker.com/) as it's component model. 
 
-In Dux, a **component** is an isolated bucket of bits; our building blocks. A **service** is a logical unit of one or more components. Expect these terms to be used inconsistently with this definition. 
+In Dux, a **component** is an isolated bucket of bits; our building blocks. A **service** is a logical unit of one or more components. Expect these terms to be used inconsistently with their definition. 
 
 ## Core Services 
 
