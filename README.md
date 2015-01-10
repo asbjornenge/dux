@@ -48,6 +48,8 @@ Let's imagine that our *Hosts* state hold information about *load* that the *Sch
 
 ![sensors](sensors.mermaid.png)
 
+Include some closing thoughts...
+
 ## Monitoring Example
 
-Coming...
+Provide links to Dux ref. impl of monitoring instead of overloading this document...
