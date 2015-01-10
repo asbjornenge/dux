@@ -38,3 +38,15 @@ The [Scheduler](/) is responsible for managing components. It gets a list of *co
 ### Discovery
 
 The [Discovery]() service is there to facilitate components discovering each other. There is a multitude of ways to implement service discovery. The reference implementation of Dux uses a [DNS](http://en.wikipedia.org/wiki/Domain_Name_System) based service discovery solution. This has the benefit that most current software (and us humans) are accustomed to using DNS for service discovery.
+
+## Sensors
+
+A Sensor is simply a naming convention for components that feed information back to the StateStore. 
+
+Let's imagine that our *Hosts* state hold information about *load* that the *Scheduler* will then use to improve it's decisions on where to run components. We can then imagine a [HostLoadSensor]() that will query our *Hosts* an feed back *load* to the StateStore.
+
+![sensors](sensors.mermaid.png)
+
+## Monitoring Example
+
+Coming...
