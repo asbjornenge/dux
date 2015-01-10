@@ -26,6 +26,7 @@ Examples of state:
 * Containers
 * DNS
 * Secrets
+* Service Configuration
 
 ### Dispatcher
 
