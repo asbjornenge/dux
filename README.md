@@ -32,7 +32,7 @@ Examples of state:
 
 The [Dispatcher](/) is responsible for distributing messages from publishers to subscribers. Any component can act as publisher or subscriber to any message channel. Messages will be broadcast to all subscribes of that channel. This flexibility allows the system to grow dynamically.
 
-If you are familiar with Flux, you will notice that the dispatcher is somewhat reversed in Dux. In Flux there are multiple Stores that needs to be informed about Actions. In Dux there is a single StateStore (at least in the basic design), but multiple Services that needs to be notified about changes to that state.
+If you are familiar with Flux, you will notice that the dispatcher is somewhat reversed in Dux. In Flux there are multiple Stores that needs to be informed about Actions, and the Dispatcher is what notifies all the stores. In Dux however we have a single StateStore. Hence the Dispatcher serves more as an event emitter, notifying all the listening services about changes in state.
 
 ### Scheduler
 
