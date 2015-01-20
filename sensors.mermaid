@@ -3,9 +3,9 @@ graph LR;
 	StateStore;
 	Dispatcher((Dispatcher));
 	Scheduler;
-    HostLoadSensor((Sensor));
+    Sensor;
 
 	StateStore --> Dispatcher
 	Dispatcher --> Scheduler
     Scheduler --> HostLoadSensor 
-    HostLoadSensor --> StateStore 
+    Sensor --> StateStore 
