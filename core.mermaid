@@ -8,5 +8,7 @@ graph LR;
 
 	StateStore --> Dispatcher
 	Dispatcher --> Scheduler
+    Dispatcher --> Applications
 	Scheduler --> Applications
 	Applications --> Discovery
+    Discovery --> Applications
