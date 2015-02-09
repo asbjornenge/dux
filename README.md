@@ -2,9 +2,11 @@
 
 > DANGER: Novice at work! Incomplete nonsense.
 
-Dux is an architecture for distributed systems inspired by [Flux](https://facebook.github.io/flux/). Dux is both a design and a reference implementation. The reference implementation uses [Docker](https://www.docker.com/) as it's component model. 
+Dux is an architecture for distributed systems inspired by [Flux](https://facebook.github.io/flux/).
 
 In Dux, a **component** is an isolated bucket of bits; our building block. A **service** is a logical unit of one or more components. Expect these terms to be used inconsistently with their definition. 
+
+Dux is both a design and a reference implementation. The reference implementation uses [Docker](https://www.docker.com/) as it's component model. 
 
 Check out the [dux-quickstart](https://github.com/asbjornenge/dux-quickstart) guide to get started.
 
