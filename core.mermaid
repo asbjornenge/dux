@@ -12,3 +12,8 @@ graph LR;
 	Scheduler --> Applications
     SensorA --> StateStore
     SensorB --> StateStore
+
+    classDef core fill:#C7F464,stroke:#333,stroke-width:2px;
+    classDef sensor fill:#4ECDC4,stroke:#333,stroke-width:2px;
+
+    class StateStore,Dispatcher,Scheduler core
