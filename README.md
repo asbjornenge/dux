@@ -4,11 +4,13 @@
 
 Dux is an architecture for distributed systems inspired by [Flux](https://facebook.github.io/flux/). Dux is both a design and a reference implementation. The reference implementation uses [Docker](https://www.docker.com/) as it's component model. 
 
-In Dux, a **component** is an isolated bucket of bits; our building blocks. A **service** is a logical unit of one or more components. Expect these terms to be used inconsistently with their definition. 
+In Dux, a **component** is an isolated bucket of bits; our building block. A **service** is a logical unit of one or more components. Expect these terms to be used inconsistently with their definition. 
+
+Check out the [dux-quickstart](https://github.com/asbjornenge/dux-quickstart) to get started.
 
 ## Core Services 
 
-At it's core Dux has a **StateStore**, a **Dispatcher**, a **Scheduler** and a **Discovery** service.
+At it's core Dux has a **StateStore**, a **Dispatcher** and a **Scheduler**.
 
 ![core](core.mermaid.png)
 
@@ -16,7 +18,7 @@ There is no technical distinction between Dux components and application compone
 
 ### StateStore
 
-The [StateStore](/) is a fundamental part of Dux. It declaratively holds the state for your services. Whenever some state changes the StateStore will trigger events notifying all subscribing services that this state has changed. New services can also request any current state.
+The [StateStore](https://github.com/asbjornenge/dux-statestore) is a fundamental part of Dux. It declaratively holds the state for your services. Whenever some state changes the StateStore will publish the updated state via the Dispatcher. Any subscribing services will be notified that this state has changed. The StateStore also has a restful http api to allow new services request any current state.
 
 With a nice UI on top, the StateStore can serve as a editable configuration store for your cluster.
 

@@ -3,12 +3,12 @@ graph LR;
 	StateStore;
 	Dispatcher((Dispatcher));
 	Scheduler;
-	Discovery((Discovery));
 	Applications((Application Components));
 
-	StateStore --> Dispatcher
-	Dispatcher --> Scheduler
-    Dispatcher --> Applications
+	StateStore -->|/state| Dispatcher
+    Dispatcher -->|/state/a| StatefulAppA
+	Dispatcher -->|/state/*| Scheduler
+    Dispatcher -->|/state/b| StatefulAppB
 	Scheduler --> Applications
-	Applications --> Discovery
-    Discovery --> Applications
+    SensorA --> StateStore
+    SensorB --> StateStore
