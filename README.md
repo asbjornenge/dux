@@ -34,9 +34,9 @@ Examples of state:
 
 ### Dispatcher
 
-The [Dispatcher](https://github.com/asbjornenge/dux-dispatcher) is responsible for distributing messages from publishers to subscribers. Any component can act as publisher or subscriber to any message channel. Messages will be broadcast to all subscribes of that channel. This flexibility allows the system to grow dynamically.
+The [Dispatcher](https://github.com/asbjornenge/dux-dispatcher) is responsible for distributing messages from publishers to subscribers. Any component can act as publisher or subscriber to any message channel. Messages will be broadcast to all subscribers of that channel. This flexibility allows the system to grow dynamically.
 
-If you are familiar with Flux, you will notice that the dispatcher is somewhat reversed in Dux. In Flux there are multiple Stores that needs to be informed about Actions, and the Dispatcher is what notifies all the stores. In Dux however we have a single StateStore. Hence the Dispatcher serves more as an event emitter, notifying all the listening services about changes in state. Updates to state are made directly to the StateStore.
+If you are familiar with Flux, you will notice that the dispatcher is somewhat reversed in Dux. In Flux there are multiple Stores that needs to be informed about Actions, and the Dispatcher is what notifies all the stores. In Dux however we have a single StateStore. Hence the Dispatcher serves more as an event emitter, notifying all the listening services about changes in state. Updates to state are made directly to the StateStore (by Sensors).
 
 ### Scheduler
 
@@ -46,7 +46,7 @@ The [Scheduler](https://github.com/asbjornenge/dux-scheduler) is responsible for
 
 A Sensor is a naming convention for components that feed information back to the StateStore. 
 
-They are defined as a special component type for a single, but very important reason; It is important to be aware that components updating the StateStore should **NOT** consume the same state as they are updating. This could lead to cyclic loops throwing an entire cluster into the abyss. There is nothing in Dux preventing you from creating cycles, so it is important to be aware of this fact. As a rule you should always structure your Dux applications as a [DAG](http://en.wikipedia.org/wiki/Directed_acyclic_graph).
+They are defined as a special component type for a single, but very important reason; components updating the StateStore should **NOT** consume the same state as they are updating. This could lead to cyclic loops throwing an entire cluster into the abyss. There is nothing in Dux preventing you from creating cycles, so it is important to be aware of this fact. As a rule you should always structure your Dux applications as a [DAG](http://en.wikipedia.org/wiki/Directed_acyclic_graph).
 
 ## Monitoring Example (coming)
 
