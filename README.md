@@ -48,6 +48,4 @@ A Sensor is a naming convention for components that feed information back to the
 
 They are defined as a special component type for a single, but very important reason; components updating the StateStore should **NOT** consume the same state as they are updating. This could lead to cyclic loops throwing an entire cluster into the abyss. There is nothing in Dux preventing you from creating cycles, so it is important to be aware of this fact. As a rule you should always structure your Dux applications as a [DAG](http://en.wikipedia.org/wiki/Directed_acyclic_graph).
 
-## Monitoring Example (coming)
-
-Provide links to Dux ref. impl of monitoring instead of overloading this document...
+enjoy
